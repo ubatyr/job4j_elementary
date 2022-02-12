@@ -39,7 +39,7 @@ public class PointTest {
     }
 
     @Test
-    public void when00to22then283() {
+    public void when00to22then2dot83() {
         int x1 = 0;
         int y1 = 0;
         int x2 = 2;
