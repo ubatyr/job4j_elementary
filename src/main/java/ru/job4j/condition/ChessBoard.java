@@ -21,3 +21,4 @@ public class ChessBoard {
         System.out.println(way(2, 6, 4, 1));
     }
 }
+
