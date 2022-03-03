@@ -30,7 +30,7 @@ public class MatrixCheckTest {
     }
 
     @Test
-    public void whenHesMonoVertical() {
+    public void whenHasMonoVertical() {
         char[][] input = {
                 {' ', ' ', 'X'},
                 {' ', ' ', 'X'},
