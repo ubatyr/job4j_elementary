@@ -9,7 +9,7 @@ public class MatrixCheckTest {
     public void whenHasMonoHorizontal() {
         char[][] input = {
                 {' ', ' ', ' '},
-                {'x', 'x', 'x'},
+                {'X', 'X', 'X'},
                 {' ', ' ', ' '}
         };
         int row = 1;
@@ -18,11 +18,11 @@ public class MatrixCheckTest {
     }
 
     @Test
-    public void whenNotHasMonoHorizontal() {
+    public void whenHasNotMonoHorizontal() {
         char[][] input = {
                 {' ', ' ', ' '},
-                {' ', 'a', ' '},
-                {'a', 'b', 'c'}
+                {' ', ' ', ' '},
+                {' ', ' ', ' '}
         };
         int row = 1;
         boolean result = MatrixCheck.monoHorizontal(input, row);
@@ -32,9 +32,9 @@ public class MatrixCheckTest {
     @Test
     public void whenHesMonoVertical() {
         char[][] input = {
-                {' ', ' ', 'x'},
-                {' ', ' ', 'x'},
-                {' ', ' ', 'x'}
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'}
         };
         int column = 2;
         boolean result = MatrixCheck.monoVertical(input, column);
@@ -42,11 +42,11 @@ public class MatrixCheckTest {
     }
 
     @Test
-    public void whenNotHasMonoVertical() {
+    public void whenHasNotMonoVertical() {
         char[][] input = {
                 {' ', ' ', ' '},
                 {' ', ' ', ' '},
-                {'a', 'b', 'c'}
+                {' ', ' ', ' '}
         };
         int column = 1;
         boolean result = MatrixCheck.monoVertical(input, column);
@@ -56,12 +56,12 @@ public class MatrixCheckTest {
     @Test
     public void whenDiagonalFullX() {
         char[][] input = {
-                {'x', ' ', ' '},
-                {' ', 'x', 'x'},
-                {' ', ' ', 'x'}
+                {'X', ' ', ' '},
+                {' ', 'X', ' '},
+                {' ', ' ', 'X'}
         };
         char[] result = MatrixCheck.extractDiagonal(input);
-        char[] expected = {'x', 'x', 'x'};
+        char[] expected = {'X', 'X', 'X'};
         Assert.assertArrayEquals(expected, result);
     }
 
@@ -80,12 +80,12 @@ public class MatrixCheckTest {
     @Test
     public void whenDiagonalMix() {
         char[][] input = {
-                {'x', ' ', ' '},
-                {' ', 'y', ' '},
-                {' ', ' ', 'z'}
+                {'X', ' ', ' '},
+                {' ', 'Y', ' '},
+                {' ', ' ', 'Z'}
         };
         char[] result = MatrixCheck.extractDiagonal(input);
-        char[] expected = {'x', 'y', 'z'};
+        char[] expected = {'X', 'Y', 'Z'};
         Assert.assertArrayEquals(expected, result);
     }
 }
