@@ -21,7 +21,7 @@ public class MatrixCheckTest {
     public void whenHasNotMonoHorizontal() {
         char[][] input = {
                 {' ', ' ', ' '},
-                {' ', ' ', ' '},
+                {' ', 'X', 'X'},
                 {' ', ' ', ' '}
         };
         int row = 1;
@@ -44,9 +44,9 @@ public class MatrixCheckTest {
     @Test
     public void whenHasNotMonoVertical() {
         char[][] input = {
+                {' ', ' ', 'X'},
                 {' ', ' ', ' '},
-                {' ', ' ', ' '},
-                {' ', ' ', ' '}
+                {' ', ' ', 'X'}
         };
         int column = 1;
         boolean result = MatrixCheck.monoVertical(input, column);
