@@ -1,51 +1,41 @@
 package ru.job4j.condition;
 
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 public class PointTest {
 
     @Test
     public void when00to20Then2() {
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
         double expected = 2;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(expected, is(a.distance(b)));
     }
 
     @Test
     public void when00to30Then3() {
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 3;
-        int y2 = 0;
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 3);
         double expected = 3;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(expected, is(a.distance(b)));
     }
 
     @Test
     public void when00to34Then5() {
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 3;
-        int y2 = 4;
+        Point a = new Point(0, 0);
+        Point b = new Point(3, 4);
         double expected = 5;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(expected, is(a.distance(b)));
     }
 
     @Test
     public void when00to22then2dot83() {
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 2;
+        Point a = new Point(0, 0);
+        Point b = new Point(2, 2);
         double expected = 2.83;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(expected, is(a.distance(b)));
     }
 }
