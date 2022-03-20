@@ -14,7 +14,7 @@ public class Point {
     }
 
     public double distance(Point that) {
-        return Math.round((sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2))) * 100.0) / 100.0;
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
     public static void main(String[] args) {
